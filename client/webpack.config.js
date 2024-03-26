@@ -15,7 +15,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html', // Path to your HTML template
+      template: './index.html',
     }),
     new WebpackPwaManifest({
       fingerprints: false,
@@ -33,13 +33,12 @@ module.exports = {
       ],
     }),
     new InjectManifest({
-      swSrc: './src-sw.js', // Path to your service worker file
+      swSrc: './src-sw.js',
       swDest: 'src-sw.js',
     }),
   ],
   module: {
     rules: [
-      // Add rules for CSS loaders and babel
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],

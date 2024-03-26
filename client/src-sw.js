@@ -25,18 +25,16 @@ warmStrategyCache({
 })
 
 registerRoute(
-  // Define a route for your assets, for example, JS and CSS files
   ({ request }) =>
     request.destination === 'script' || request.destination === 'style',
-  // Use a CacheFirst strategy for assets
   new CacheFirst({
-    cacheName: 'assets-cache', // Name for the cache
+    cacheName: 'assets-cache',
     plugins: [
       new CacheableResponsePlugin({
-        statuses: [0, 200], // Cache successful responses
+        statuses: [0, 200],
       }),
       new ExpirationPlugin({
-        maxAgeSeconds: 7 * 24 * 60 * 60, // Cache for 7 days
+        maxAgeSeconds: 7 * 24 * 60 * 60,
       }),
     ],
   })

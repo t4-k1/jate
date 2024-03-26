@@ -42,7 +42,7 @@ npm run start
 
 ## Deployed Site
 
-Check out the depoyed site [here](LINK)
+Check out the depoyed site [here](https://jate-labg.onrender.com/)
 
 ## License
 
